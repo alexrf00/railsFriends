@@ -50,12 +50,7 @@ RUN chmod +x bin/* && \
     sed -i "s/\r$//g" bin/* && \
     sed -i 's/ruby\.exe$/ruby/' bin/*
 
-# Add an ARG for RAILS_MASTER_KEY. This ARG will be set by Render's build system.
-ARG RAILS_MASTER_KEY
-
-# Set it as an ENV variable so it's available during the build step
-ENV RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
-
+RUN mkdir -p config && ln -s /etc/secrets/rails_master_key config/master.key
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
