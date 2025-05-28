@@ -53,7 +53,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
-group :development do
+group :development, :test do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   # Use sqlite3 as the database for Active Record
