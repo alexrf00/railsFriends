@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 # Fiddle library
-gem 'fiddle'
+gem "fiddle"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
@@ -38,9 +38,12 @@ gem "kamal", require: false
 gem "thruster", require: false
 
 #Devise
-gem 'devise', '~> 4.9', '>= 4.9.4'
+gem "devise", "~> 4.9", ">= 4.9.4"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+# Use pg as the database for Active Record
+gem "pg"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -56,12 +59,6 @@ end
 group :development, :test do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  # Use sqlite3 as the database for Active Record
-  gem "sqlite3", "2.2"
-end
-
-group :production do
-  gem 'pg', '~> 1.5', '>= 1.5.9'
 end
 
 group :test do
