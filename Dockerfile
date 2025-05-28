@@ -52,9 +52,11 @@ RUN chmod +x bin/* && \
 
 
 # Add this BEFORE your assets:precompile step
-RUN echo "--- Current Working Directory ---" && \
-    pwd && \
-    echo "--- End Current Working Directory ---"
+RUN echo "--- Checking /etc/secrets/ content ---" && \
+    ls -la /etc/secrets/ && \
+    echo "--- Attempting to print .env content (CAUTION: sensitive data!) ---" && \
+    cat /etc/secrets/.env || echo "/etc/secrets/.env not found or readable." && \
+    echo "--- End Checking /etc/secrets/ ---"
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
