@@ -1,0 +1,45 @@
+<% if user_signed_in? %>
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="table-dark">
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>CreatedBy</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @friends.each do |friend| %>
+      <% if friend.user == current_user %>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+          <td><%= friend.user_id %></td>
+          <td><%= link_to 'Show', friend %></td>
+          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+          <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to "New friend", new_friend_path, class: "btn btn-primary" %>
+<% else %>
+  <div class="jumbotron">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
+<% end %>
