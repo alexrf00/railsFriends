@@ -80,4 +80,8 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  url: <%= ENV.fetch("DATABASE_URL") %>
+  primary:
+    url: <%= ENV.fetch("DATABASE_URL") %>
+    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  cable:
+    url: <%= ENV.fetch("DATABASE_URL") %>
