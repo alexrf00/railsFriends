@@ -1,5 +1,4 @@
 class TokensController < ApplicationController
-  skip_before_action :authorize_request, only: [:refresh]
 
   def refresh
     refresh_token = cookies.signed[:refresh_token]
