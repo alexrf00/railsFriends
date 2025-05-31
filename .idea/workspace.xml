@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0df23a9e-a4ec-44fd-bac3-4ef78edd09f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/services/jwt_service.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/friends.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/friends.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/cors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/cors.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +141,7 @@
       <updated>1748554102207</updated>
       <workItem from="1748554103543" duration="951000" />
       <workItem from="1748559486194" duration="3586000" />
-      <workItem from="1748572630219" duration="15769000" />
+      <workItem from="1748572630219" duration="16692000" />
     </task>
     <servers />
   </component>
