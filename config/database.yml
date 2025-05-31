@@ -85,3 +85,7 @@ production:
     pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   cable:
     url: <%= ENV.fetch("DATABASE_URL") %>
+  queue:
+    url: <%= ENV.fetch("DATABASE_URL") %>
+  cache:
+    url: <%= ENV.fetch("DATABASE_URL") %>
